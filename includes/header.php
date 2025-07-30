@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <?php
-  $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
+  $protocol = "https://"; // Always use HTTPS
   $domainName = $_SERVER['HTTP_HOST'];
   $path = rtrim(dirname($_SERVER['PHP_SELF']), '/\\') . '/';
 
   $base_url = $protocol . $domainName . $path;
+?>
 
-  ?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
